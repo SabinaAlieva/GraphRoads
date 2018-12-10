@@ -287,7 +287,7 @@ def timeAstarEukl(start, target):
     #print("--- %s seconds ---" % (time.time() - start_time))
     #drawShortestWay(GG, Astar_Eukl)
     
-random = nodes.items()[1:1501:15]
+rando = nodes.items()[1:1501:15]
     
 filename =  "Statistics__100__points" + ".csv"
 
@@ -303,7 +303,7 @@ def csv_writer(path, fieldnames, data):
         for row in data:
             writer.writerow(row)
 
-for nd in random:
+for nd in rando:
     cur_node = nd[0]
     line = []
     line_dict = []
