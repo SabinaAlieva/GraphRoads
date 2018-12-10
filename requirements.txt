@@ -2,6 +2,5 @@ lxml
 networkx
 matplotlib
 numpy
-collections
 deque
 time
