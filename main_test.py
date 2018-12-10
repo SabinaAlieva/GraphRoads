@@ -273,21 +273,21 @@ for nd in list_adj:
         
 nodesi = {str(key): [nodes.get(key)[1], nodes.get(key)[0]] for key in nodes}
 
-def DrawGraph():
+#def DrawGraph():
     #nx.draw_networkx(GG, pos=nodesi, node_size = 0.1, width = 0.2, with_labels = False)
     #plt.axis('on')
     #plt.show()
     
 
-def DrawSaveShortestWay(GG, way, start, end):
+#def DrawSaveShortestWay(GG, way, start, end):
     #nx.draw_networkx(GG, pos=nodesi, node_size = 0, width = 0.2, with_labels = False, node_color='black', edge_color='black')
-    h = GG.subgraph(way)
+    #h = GG.subgraph(way)
     #nx.draw_networkx_nodes(h,pos=nodesi, node_color='red', node_size = 2) 
     #nx.draw_networkx_edges(h,pos=nodesi, edge_color='red', width = 2)
     #fig = plt.gcf()
     #fig.set_size_inches(8, 12)
     #plt.show()
-    filename = "ShortestWay__" + str(start) + "__" + str(end) + ".png"
+    #filename = "ShortestWay__" + str(start) + "__" + str(end) + ".png"
     #plt.savefig(filename, dpi = 100)
     #fig.clear()
     
