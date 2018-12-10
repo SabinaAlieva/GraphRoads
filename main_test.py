@@ -116,7 +116,7 @@ for h in hospitals:
     target.append(nd_mai)
     
 def Input_lon():
-    print (' 38.84 и 38.96')
+    print (' 38.84 and 38.96')
     global lon
     lon = input()
     if lon < 38.84  or lon > 38.96:
@@ -124,7 +124,7 @@ def Input_lon():
         Input_lon()
         
 def Input_lat():
-    print (' 47.20 и 47.28')
+    print (' 47.20 and 47.28')
     global lat
     lat = input()
     if lat < 47.20 or lat > 47.28:
