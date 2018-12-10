@@ -2,8 +2,6 @@ lxml
 networkx
 matplotlib
 numpy
-heappush
-heappop
 collections
 deque
 time
