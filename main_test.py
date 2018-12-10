@@ -287,6 +287,8 @@ def timeAstarEukl(start, target):
     #print("--- %s seconds ---" % (time.time() - start_time))
     #drawShortestWay(GG, Astar_Eukl)
     
+random = nodes.items()[1:1501:15]
+    
 filename =  "Statistics__100__points" + ".csv"
 
 fieldnames = ['idNode', 'Dejicstra', 'Levit', 'AstarEuklid','AstarManh', 'AstarCheb']
