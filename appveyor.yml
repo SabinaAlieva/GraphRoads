@@ -1,8 +1,14 @@
 image: 
 - Ubuntu
-- Visual Studio 2017
+
+branches:
+  only:
+    - master
+
 install:
 - pip install --user -r requirements.txt
+
+configuration: Release
 
 test_script:
 - python main_test.py
