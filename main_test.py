@@ -154,8 +154,8 @@ Lon_Lat = []
 #     for nd in list_adj[key]:
 #         plt.plot([nodes[key][1],nodes[nd][1]], [nodes[key][0],nodes[nd][0]], 'blue')
 
-for h in hospitals:
-    plt.plot(hospitals.get(h)[1], hospitals.get(h)[0], 'ro')
+#for h in hospitals:
+    #plt.plot(hospitals.get(h)[1], hospitals.get(h)[0], 'ro')
 #plt.plot(nodes.get(start)[1], nodes.get(start)[0],  'bo')
 
 #plt.show()
@@ -226,8 +226,8 @@ def Levita(a, b):
 
 
 def PlotResult(a, b, way):
-    fig = plt.gcf()
-    fig.set_size_inches(8, 12)   
+    #fig = plt.gcf()
+    #fig.set_size_inches(8, 12)   
     Lon_Lat = []
 
 
@@ -276,7 +276,7 @@ nodesi = {str(key): [nodes.get(key)[1], nodes.get(key)[0]] for key in nodes}
 def DrawGraph():
     nx.draw_networkx(GG, pos=nodesi, node_size = 0.1, width = 0.2, with_labels = False)
     plt.axis('on')
-    plt.show()
+    #plt.show()
     
 
 def DrawSaveShortestWay(GG, way, start, end):
@@ -284,12 +284,12 @@ def DrawSaveShortestWay(GG, way, start, end):
     h = GG.subgraph(way)
     nx.draw_networkx_nodes(h,pos=nodesi, node_color='red', node_size = 2) 
     nx.draw_networkx_edges(h,pos=nodesi, edge_color='red', width = 2)
-    fig = plt.gcf()
-    fig.set_size_inches(8, 12)
+    #fig = plt.gcf()
+    #fig.set_size_inches(8, 12)
     #plt.show()
     filename = "ShortestWay__" + str(start) + "__" + str(end) + ".png"
     #plt.savefig(filename, dpi = 100)
-    fig.clear()
+    #fig.clear()
     
 import math
 
@@ -347,12 +347,12 @@ for t in target:
     
 random = nodes.items()[1:1501:15]
 
-fig = plt.gcf()
-fig.set_size_inches(8, 12)   
+#fig = plt.gcf()
+#fig.set_size_inches(8, 12)   
 Lon_Lat = []
 
-for r in random[1:30]:
-    plt.plot(nodes.get(r[0])[1], nodes.get(r[0])[0], 'ro')
+#for r in random[1:30]:
+    #plt.plot(nodes.get(r[0])[1], nodes.get(r[0])[0], 'ro')
 #plt.plot(nodes.get(start)[1], nodes.get(start)[0],  'bo')
 
 #plt.show()
