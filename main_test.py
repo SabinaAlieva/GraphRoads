@@ -159,68 +159,6 @@ for h in hospitals:
 #plt.plot(nodes.get(start)[1], nodes.get(start)[0],  'bo')
 
 #plt.show()
-
-from heapq import heappush
-from heapq import heappop 
-
-def Dejicstra(a, b):
-    len_sh_way = {nd: 1000000 for nd in nodes} 
-    len_sh_way.update({a: 0})
-    
-    shortest_way = {nd: [] for nd in nodes} 
-    shortest_way.update({a: [a]})
-    
-    current_node = a
-    
-    nd_to_visit = []                 
-    deleted = []                      
-    nd_to_visit.append(a)
-    
-    sort_len = [] 
-    
-    while(1):
-        if current_node != b:  
-            
-            sort_len = [len_sh_way.get(nd) for nd in nd_to_visit]  
-            sort_len.sort()            
-                     
-            for key in nd_to_visit: 
-                if len_sh_way.get(key) == sort_len[0]: 
-                    current_node = key             
-                    deleted.append(key)             
-                    break
-            
-            nd_to_vis = list(tuple(list_adj.get(current_node))) 
-            
-            for nd in nd_to_vis:           
-                nd_to_visit.append(nd)
-            nd_to_visit = list(set(nd_to_visit)) 
-                
-            for nd in deleted:        
-                if nd_to_visit.count(nd) > 0:
-                    nd_to_visit.remove(nd)    
-            
-            for u in nd_to_visit:          
-                weight = math.sqrt((nodes.get(u)[1] + nodes.get(current_node)[1])**2 + (nodes.get(u)[0] + nodes.get(current_node)[0])**2)
-                
-                if len_sh_way.get(u) > len_sh_way.get(current_node) + weight:                
-                
-                    w = len_sh_way.get(current_node) + weight
-                    len_sh_way.update({u: w}) 
-                                   
-                    mas = list(tuple(shortest_way.get(current_node)))
-                    mas.append(u)
-                    m = list(tuple(mas))
-                    shortest_way.update({u: m}) 
-                    
-            if len(nd_to_visit) == 0:
-                return shortest_way.get(b)
-                break
-        
-        else: 
-            break
-        
-    return (shortest_way.get(b))
     
 from collections import deque
 
@@ -313,7 +251,7 @@ def PlotResult(a, b, way):
 import time
 
 start_time = time.time()
-way = Dejicstra(start, target[3])
+#way = Dejicstra(start, target[3])
 print("--- %s seconds ---" % (time.time() - start_time))
 
 start_time = time.time()
