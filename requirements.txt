@@ -1,2 +1,12 @@
 lxml
 networkx
+matplotlib
+numpy 
+csv
+math
+heapq
+heappush
+heappop
+collections
+deque
+time
