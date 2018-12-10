@@ -8,3 +8,4 @@ install:
 os:
   - linux
 
+script: python2 test.py
