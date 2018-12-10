@@ -2,7 +2,6 @@ lxml
 networkx
 matplotlib
 numpy
-math
 heapq
 heappush
 heappop
