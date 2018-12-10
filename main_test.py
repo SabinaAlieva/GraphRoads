@@ -64,21 +64,21 @@ for key in list_adj:
     list_adj[key] = list(set(list_adj[key]))
     
 line_csv = []
-with open("list_sochi.csv", "w") as csv_file:
+"""with open("list_sochi.csv", "w") as csv_file:
     writer = csv.writer(csv_file, delimiter=',')
     for key in list_adj:
         line_csv.append(key)
         for r in list_adj[key]:
             line_csv.append(r)
         writer.writerow(line_csv)
-        line_csv = []
+        line_csv = []"""
         
 import csv
 
 line = []
 lline = np.zeros(len(list_adj) + 1)      
 
-with open("matr_sochi.csv", "w") as csv_file:
+"""with open("matr_sochi.csv", "w") as csv_file:
     writer = csv.writer(csv_file, delimiter=',')
     
     line.append(0)
@@ -92,6 +92,7 @@ with open("matr_sochi.csv", "w") as csv_file:
             lline[line.index(nd)] = 1
         writer.writerow(lline)
         lline = np.zeros(len(list_adj) + 1)
+        """
         
 hospitals = {}
 
@@ -131,8 +132,11 @@ def Input_lat():
         print ('again')
         Input_lat()
         
-Input_lon()
-Input_lat()
+#Input_lon()
+#Input_lat()
+
+lon = 29.847
+lat = 59.728
 
 min_w = 1000000
 for nd in nodes:
@@ -151,10 +155,10 @@ Lon_Lat = []
 #         plt.plot([nodes[key][1],nodes[nd][1]], [nodes[key][0],nodes[nd][0]], 'blue')
 
 for h in hospitals:
-    plt.plot(hospitals.get(h)[1], hospitals.get(h)[0], 'ro')
-plt.plot(nodes.get(start)[1], nodes.get(start)[0],  'bo')
+    #plt.plot(hospitals.get(h)[1], hospitals.get(h)[0], 'ro')
+#plt.plot(nodes.get(start)[1], nodes.get(start)[0],  'bo')
 
-plt.show()
+#plt.show()
 
 from heapq import heappush, heappop 
 
@@ -293,18 +297,18 @@ def PlotResult(a, b, way):
 #         for nd in list_adj[key]:
 #             plt.plot([nodes[key][1],nodes[nd][1]], [nodes[key][0],nodes[nd][0]], 'blue')
 
-    plt.plot(nodes.get(a)[1], nodes.get(a)[0], 'ro')
-    plt.plot(nodes.get(b)[1], nodes.get(b)[0], 'ro')
+    #plt.plot(nodes.get(a)[1], nodes.get(a)[0], 'ro')
+    #plt.plot(nodes.get(b)[1], nodes.get(b)[0], 'ro')
 
     
     for nd in way:                 
         Lon_Lat.append([nodes.get(nd)[1], nodes.get(nd)[0]])
     Lon_Lat = np.array(Lon_Lat)   
-    plt.plot(Lon_Lat[::, 0], Lon_Lat[::, 1], 'red')
+    #plt.plot(Lon_Lat[::, 0], Lon_Lat[::, 1], 'red')
     Lon_Lat = []
 
 
-    plt.show()
+    #plt.show()
     
 import time
 
@@ -346,7 +350,7 @@ def DrawSaveShortestWay(GG, way, start, end):
     fig.set_size_inches(8, 12)
     #plt.show()
     filename = "ShortestWay__" + str(start) + "__" + str(end) + ".png"
-    plt.savefig(filename, dpi = 100)
+    #plt.savefig(filename, dpi = 100)
     fig.clear()
     
 import math
@@ -400,8 +404,8 @@ def WriteCsvFile(start, target, way):
 
 for t in target:
     Dejicstra = nx.dijkstra_path(GG, str(start), str(t))
-    DrawSaveShortestWay(GG, Dejicstra, str(start), str(t))
-    WriteCsvFile(str(start), str(t), Dejicstra)
+    #DrawSaveShortestWay(GG, Dejicstra, str(start), str(t))
+    #WriteCsvFile(str(start), str(t), Dejicstra)
     
 random = nodes.items()[1:1501:15]
 
@@ -410,10 +414,10 @@ fig.set_size_inches(8, 12)
 Lon_Lat = []
 
 for r in random[1:30]:
-    plt.plot(nodes.get(r[0])[1], nodes.get(r[0])[0], 'ro')
-plt.plot(nodes.get(start)[1], nodes.get(start)[0],  'bo')
+    #plt.plot(nodes.get(r[0])[1], nodes.get(r[0])[0], 'ro')
+#plt.plot(nodes.get(start)[1], nodes.get(start)[0],  'bo')
 
-plt.show()
+#plt.show()
 
 filename =  "Statistics__100__points" + ".csv"
 
@@ -446,6 +450,6 @@ for nd in random:
     line = [cur_node, dejicstr, levit, aStEukl, aStManh, aStCheb]
     inner_dict = dict(zip(fieldnames, line))
     line_dict.append(inner_dict)
-    csv_writer(filename, fieldnames, line_dict)
+    #csv_writer(filename, fieldnames, line_dict)
     
     
