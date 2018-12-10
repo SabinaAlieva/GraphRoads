@@ -8,4 +8,6 @@ install:
 os:
   - linux
 
-script: python2 test.py
+script: python2 main.ipynb
+script: python2 main2.ipynb
+script: python2 main3.ipynb
