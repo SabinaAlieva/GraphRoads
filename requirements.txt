@@ -1,8 +1,7 @@
 lxml
 networkx
 matplotlib
-numpy 
-csv
+numpy
 math
 heapq
 heappush
