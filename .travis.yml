@@ -1,6 +1,12 @@
- language: python
- 
- python:
-    - "2.7"
-    
- script: make test
+language: python
+python:
+  - "2.7" 
+  
+install:
+  - pip install -r requirements.txt
+  - sudo apt-get install python-tk
+#  - pip install .
+# command to run tests
+script: python2 test.py
+os:
+  - linux
