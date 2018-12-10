@@ -288,7 +288,7 @@ def PlotResult(a, b, way):
     fig.set_size_inches(8, 12)   
     Lon_Lat = []
 
-    #общая карта
+
 #     for key in list_adj:
 #         for nd in list_adj[key]:
 #             plt.plot([nodes[key][1],nodes[nd][1]], [nodes[key][0],nodes[nd][0]], 'blue')
