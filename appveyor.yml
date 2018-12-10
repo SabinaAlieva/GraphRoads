@@ -1,0 +1,10 @@
+image: 
+- Ubuntu
+- Visual Studio 2017
+install:
+- pip install --user -r requirements.txt
+
+test_script:
+- python test.py
+
+build: off
