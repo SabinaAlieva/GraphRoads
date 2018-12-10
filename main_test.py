@@ -160,8 +160,8 @@ for h in hospitals:
 
 #plt.show()
 
-import heappush
-import heappop 
+from heapq import heappush
+from heapq import heappop 
 
 def Dejicstra(a, b):
     len_sh_way = {nd: 1000000 for nd in nodes} 
