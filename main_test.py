@@ -352,7 +352,7 @@ fig.set_size_inches(8, 12)
 Lon_Lat = []
 
 for r in random[1:30]:
-    #plt.plot(nodes.get(r[0])[1], nodes.get(r[0])[0], 'ro')
+    plt.plot(nodes.get(r[0])[1], nodes.get(r[0])[0], 'ro')
 #plt.plot(nodes.get(start)[1], nodes.get(start)[0],  'bo')
 
 #plt.show()
