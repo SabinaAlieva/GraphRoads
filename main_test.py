@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import csv
 
-FILENAME = "taganrog.xml"
+FILENAME = "ropsha.xml"
 
 with open(FILENAME) as f:
     xml = f.read()
