@@ -1,5 +1,5 @@
 from lxml import etree, objectify
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import numpy as np
 import csv
 
@@ -146,8 +146,8 @@ for nd in nodes:
         start = nd
         
         
-fig = plt.gcf()
-fig.set_size_inches(8, 12)    
+#fig = plt.gcf()
+#fig.set_size_inches(8, 12)    
 Lon_Lat = []
 
 # for key in list_adj:
@@ -274,16 +274,16 @@ for nd in list_adj:
 nodesi = {str(key): [nodes.get(key)[1], nodes.get(key)[0]] for key in nodes}
 
 def DrawGraph():
-    nx.draw_networkx(GG, pos=nodesi, node_size = 0.1, width = 0.2, with_labels = False)
-    plt.axis('on')
+    #nx.draw_networkx(GG, pos=nodesi, node_size = 0.1, width = 0.2, with_labels = False)
+    #plt.axis('on')
     #plt.show()
     
 
 def DrawSaveShortestWay(GG, way, start, end):
-    nx.draw_networkx(GG, pos=nodesi, node_size = 0, width = 0.2, with_labels = False, node_color='black', edge_color='black')
+    #nx.draw_networkx(GG, pos=nodesi, node_size = 0, width = 0.2, with_labels = False, node_color='black', edge_color='black')
     h = GG.subgraph(way)
-    nx.draw_networkx_nodes(h,pos=nodesi, node_color='red', node_size = 2) 
-    nx.draw_networkx_edges(h,pos=nodesi, edge_color='red', width = 2)
+    #nx.draw_networkx_nodes(h,pos=nodesi, node_color='red', node_size = 2) 
+    #nx.draw_networkx_edges(h,pos=nodesi, edge_color='red', width = 2)
     #fig = plt.gcf()
     #fig.set_size_inches(8, 12)
     #plt.show()
