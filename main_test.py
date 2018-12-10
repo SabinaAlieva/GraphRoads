@@ -155,7 +155,7 @@ Lon_Lat = []
 #         plt.plot([nodes[key][1],nodes[nd][1]], [nodes[key][0],nodes[nd][0]], 'blue')
 
 for h in hospitals:
-    #plt.plot(hospitals.get(h)[1], hospitals.get(h)[0], 'ro')
+    plt.plot(hospitals.get(h)[1], hospitals.get(h)[0], 'ro')
 #plt.plot(nodes.get(start)[1], nodes.get(start)[0],  'bo')
 
 #plt.show()
