@@ -160,7 +160,7 @@ for h in hospitals:
 
 #plt.show()
 
-from heapq import heappush, heappop 
+import heappush, heappop 
 
 def Dejicstra(a, b):
     
