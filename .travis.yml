@@ -5,8 +5,9 @@ python:
   
 install:
   - pip install -r requirements.txt
+  - sudo apt-get install python-tk
   
-script: python2 main_test.py
+script: python main_test.py
   
 os:
   - linux
