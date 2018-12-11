@@ -308,16 +308,16 @@ for nd in rando:
     line = []
     line_dict = []
     #dejicstr = timeDejicstra(start, cur_node)
-    aStEukl = timeAstarEukl(start, cur_node)
-    aStManh = timeAstarManh(start, cur_node)
-    aStCheb = timeAstarCheb(start, cur_node)
+    #aStEukl = timeAstarEukl(start, cur_node)
+    #aStManh = timeAstarManh(start, cur_node)
+    #aStCheb = timeAstarCheb(start, cur_node)
     
     start_time = time.time()
     way = Levita(start, cur_node)
     levit = time.time() - start_time
     
     #line = [cur_node, dejicstr, levit, aStEukl, aStManh, aStCheb]
-    line = [cur_node, levit, aStEukl, aStManh, aStCheb]
+    line = [cur_node, levit]
     inner_dict = dict(zip(fieldnames, line))
     line_dict.append(inner_dict)
     csv_writer(filename, fieldnames, line_dict)
