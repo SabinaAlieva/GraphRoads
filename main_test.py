@@ -316,7 +316,8 @@ for nd in rando:
     way = Levita(start, cur_node)
     levit = time.time() - start_time
     
-    line = [cur_node, dejicstr, levit, aStEukl, aStManh, aStCheb]
+    #line = [cur_node, dejicstr, levit, aStEukl, aStManh, aStCheb]
+    line = [cur_node, levit, aStEukl, aStManh, aStCheb]
     inner_dict = dict(zip(fieldnames, line))
     line_dict.append(inner_dict)
     csv_writer(filename, fieldnames, line_dict)
