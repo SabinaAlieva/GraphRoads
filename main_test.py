@@ -307,7 +307,7 @@ for nd in rando:
     cur_node = nd[0]
     line = []
     line_dict = []
-    dejicstr = timeDejicstra(start, cur_node)
+    #dejicstr = timeDejicstra(start, cur_node)
     aStEukl = timeAstarEukl(start, cur_node)
     aStManh = timeAstarManh(start, cur_node)
     aStCheb = timeAstarCheb(start, cur_node)
