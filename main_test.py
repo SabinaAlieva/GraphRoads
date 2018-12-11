@@ -3,9 +3,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import csv
 
-FILENAME = "taganrog.xml"
+FILENAME = "map.xml"
 
-with open(FILENAME) as f:
+with open(FILENAME, "rb") as f:
     xml = f.read()
     
 root = objectify.fromstring(xml)
@@ -287,7 +287,7 @@ def timeAstarEukl(start, target):
     #print("--- %s seconds ---" % (time.time() - start_time))
     #drawShortestWay(GG, Astar_Eukl)
     
-rando = nodes.items()[1:1501:15]
+rando = list(nodes.items())[1:1501:15]
     
 filename =  "Statistics__100__points" + ".csv"
 
@@ -321,7 +321,7 @@ for nd in rando:
     line_dict.append(inner_dict)
     csv_writer(filename, fieldnames, line_dict)
     
-    
+"""    
 filename =  "Statistics__100__points" + ".csv"
 
 node100 = []
@@ -360,7 +360,7 @@ for nd in node100[1:]:
     line_dict.append(inner_dict)
     csv_writer(filename, fieldnames, line_dict)
     
-    
+""" 
 hamilton = [start]   
 way_between = {nd:[] for nd in target}
 
@@ -389,7 +389,7 @@ for useless in range(len(hospitals)):
     way_to = []
     
     
-print hamilton
+print (hamilton)
 
 node_to = [nd for nd in target]
 node_to.append(start)
@@ -476,4 +476,4 @@ for useless in range(size - 2):
     
     node_to.remove(nd_to_add)
 
-print cicle_edge
+print (cicle_edge)
